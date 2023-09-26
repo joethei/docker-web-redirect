@@ -26,6 +26,7 @@ server {
 	listen ${LISTEN};
  	rewrite ^/${REDIRECT_TARGET}(.*)$ $1 last;
 	rewrite ^/(.*)\$ ${REDIRECT_TARGET}\$1 ${REDIRECT_TYPE};
+ 	rewrite ^(.*)/${REDIRECT_TARGET}(.*)$ $1;
 }
 EOF
 
